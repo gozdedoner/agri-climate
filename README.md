@@ -5,7 +5,7 @@ Live: **https://agri-climate.vercel.app/**
 A browser-based dashboard to compare **climate** (temperature, precipitation) and **agricultural land share** between two countries on the same time axis.  
 Built with Vue 3 + Vite, ECharts, and Leaflet. Data sources: NASA POWER & World Bank.
 
-![screenshot](public/og.png)
+
 
 ---
 
