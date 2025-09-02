@@ -1,5 +1,52 @@
-# Vue 3 + Vite
+# Agri-Climate Dashboard
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Live: **https://agri-climate.vercel.app/**
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+A browser-based dashboard to compare **climate** (temperature, precipitation) and **agricultural land share** between two countries on the same time axis.  
+Built with Vue 3 + Vite, ECharts, and Leaflet. Data sources: NASA POWER & World Bank.
+
+![screenshot](public/og.png)
+
+---
+
+## Features
+
+- 🌍 **Two-country comparison** (map + chart)
+- 📈 **Index-100 mode**: normalize series to 100 at the start of the visible window to compare shapes
+- 🟣 **Delta band**: semi-transparent band showing the gap between the two curves (Temp/Precip)
+- 📊 **12-month moving averages** (Temp/Precip)
+- 🔎 **Live correlation**: Pearson r of Agri% ↔ Temp/Precip, computed for the current zoom window
+- 🗺️ **Choropleth**: country polygon filled by Agri% scale
+- 💾 **CSV export**
+- ⚡ **Local cache**: NASA (7d) & WB (30d) via TTL’d localStorage
+- 📱 **Fully responsive** (mobile/tablet/desktop)
+
+---
+
+## Tech Stack
+
+- **Vue 3 + Vite**
+- **ECharts** (time-series plotting)
+- **Leaflet** (OSM base map)
+- **Tailwind CSS** (styling)
+- Deploy: **Vercel**
+
+---
+
+## Links
+
+- Production: https://agri-climate.vercel.app/
+- Repository: https://github.com/gozdedoner/agri-climate
+
+---
+
+## Setup
+
+> Node 18+ recommended.
+
+```bash
+git clone https://github.com/gozdedoner/agri-climate.git
+cd agri-climate
+npm i
+npm run dev
+
