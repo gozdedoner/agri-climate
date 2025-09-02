@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --card: rgba(255,255,255,.55);
+  --cardBorder: rgba(255,255,255,.35);
+}
+
+.app-bg{ @apply min-h-screen bg-gradient-to-br from-blush via-apricot/30 to-latte; }
+.card{ @apply backdrop-blur-xl rounded-2xl shadow-soft border p-5; background: var(--card); border-color: var(--cardBorder); }
+.button{ @apply px-3 py-2 rounded-lg bg-white shadow-md transition text-sm; }
+.button:hover{ @apply bg-apricot text-black; }
+#map{ height: 360px; border-radius: 14px; overflow: hidden; }
+#chart{ height: 360px; }
